@@ -50,7 +50,8 @@ public class Around : MonoBehaviour
             _Animation = StartCoroutine(AnimationCoroutine());
         }
     }
-
+    #endregion
+    #region Coroutines
     IEnumerator AnimationCoroutine()
     {
         //throw new NotImplementedException();
@@ -58,7 +59,5 @@ public class Around : MonoBehaviour
         yield return new WaitForSeconds(_wait);
         _animator.SetTrigger("IDLE");
     }
-    #endregion
-    #region Coroutines
     #endregion
 }

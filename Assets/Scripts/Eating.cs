@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -14,6 +15,7 @@ public class Eating : MonoBehaviour
     [SerializeField] Animator _animator;
     [SerializeField] GameObject _candy;
     [SerializeField] UnityEvent _event;
+    Coroutine _end;
     #endregion
     #region Enumerator
     #endregion
@@ -34,9 +36,17 @@ public class Eating : MonoBehaviour
         if (collision.attachedRigidbody.gameObject.CompareTag(_candy.tag))
         {
             _event.Invoke();
+            _end = StartCoroutine(EndCoroutine());
         }
     }
     #endregion
     #region Coroutines
+    IEnumerator EndCoroutine()
+    {
+        //throw new NotImplementedException();
+        yield return new WaitForSeconds(2);
+        // Chargez la scène actuelle à nouveau
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     #endregion
 }
