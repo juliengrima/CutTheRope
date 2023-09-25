@@ -12,9 +12,14 @@ using TMPro;
 public class Eating : MonoBehaviour
 {
     #region Champs
+    [Header("Components")]
     [SerializeField] Animator _animator;
     [SerializeField] GameObject _candy;
+    [Header("Filds")]
+    [SerializeField] float _wait;
+    [Header("Events")]
     [SerializeField] UnityEvent _event;
+    //Privates
     Coroutine _end;
     #endregion
     #region Enumerator
@@ -22,7 +27,7 @@ public class Eating : MonoBehaviour
     #region Default Informations
     void Reset()
     {
-
+        _wait = 2f;
     }
     #endregion
     #region Unity LifeCycle
@@ -44,7 +49,7 @@ public class Eating : MonoBehaviour
     IEnumerator EndCoroutine()
     {
         //throw new NotImplementedException();
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(_wait);
         // Chargez la scène actuelle à nouveau
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
