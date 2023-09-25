@@ -123,6 +123,39 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &57841534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 57841535}
+  m_Layer: 0
+  m_Name: Hooks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &57841535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57841534}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 680139926}
+  - {fileID: 794555499}
+  m_Father: {fileID: 170687737}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &168805685 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8246523078830149720, guid: bb4930b3e409345ff95c8f1afe2f20d0, type: 3}
@@ -158,9 +191,8 @@ Transform:
   m_Children:
   - {fileID: 168805685}
   - {fileID: 1024333287}
-  - {fileID: 794555499}
   - {fileID: 1547734096}
-  - {fileID: 680139926}
+  - {fileID: 57841535}
   m_Father: {fileID: 511171309}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -722,7 +754,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 170687737}
+    m_TransformParent: {fileID: 57841535}
     m_Modifications:
     - target: {fileID: 943975862480064152, guid: 3c5cbacceab1d40bbafa7b3d3f0a0722, type: 3}
       propertyPath: m_RootOrder
@@ -768,10 +800,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1309576752809487599, guid: 3c5cbacceab1d40bbafa7b3d3f0a0722, type: 3}
-      propertyPath: m_BodyType
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6857015748894698033, guid: 3c5cbacceab1d40bbafa7b3d3f0a0722, type: 3}
       propertyPath: m_Name
       value: Hook (1)
@@ -811,31 +839,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2982840810577512139, guid: 1a3a8ec5befd74f60b2e76e0fbac8b98, type: 3}
   m_PrefabInstance: {fileID: 8733022725473138579}
   m_PrefabAsset: {fileID: 0}
---- !u!233 &1024333290
-HingeJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024333286}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1374007481}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.36202234, y: 1.5462666}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
 --- !u!1 &1277472813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,7 +1157,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 170687737}
+    m_TransformParent: {fileID: 57841535}
     m_Modifications:
     - target: {fileID: 943975862480064152, guid: 3c5cbacceab1d40bbafa7b3d3f0a0722, type: 3}
       propertyPath: m_RootOrder
@@ -1199,10 +1202,6 @@ PrefabInstance:
     - target: {fileID: 943975862480064152, guid: 3c5cbacceab1d40bbafa7b3d3f0a0722, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1309576752809487599, guid: 3c5cbacceab1d40bbafa7b3d3f0a0722, type: 3}
-      propertyPath: m_BodyType
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6857015748894698033, guid: 3c5cbacceab1d40bbafa7b3d3f0a0722, type: 3}
       propertyPath: m_Name
@@ -1282,22 +1281,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 170687737}
     m_Modifications:
-    - target: {fileID: 611960398767263302, guid: 1a3a8ec5befd74f60b2e76e0fbac8b98, type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 611960398767263302, guid: 1a3a8ec5befd74f60b2e76e0fbac8b98, type: 3}
-      propertyPath: m_LinearDrag
-      value: 3.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 611960398767263302, guid: 1a3a8ec5befd74f60b2e76e0fbac8b98, type: 3}
-      propertyPath: m_AngularDrag
-      value: 3.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 611960398767263302, guid: 1a3a8ec5befd74f60b2e76e0fbac8b98, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2316657922585104661, guid: 1a3a8ec5befd74f60b2e76e0fbac8b98, type: 3}
       propertyPath: m_Name
       value: Candy
@@ -1347,26 +1330,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4674056505301954430, guid: 1a3a8ec5befd74f60b2e76e0fbac8b98, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674056505301954430, guid: 1a3a8ec5befd74f60b2e76e0fbac8b98, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.31539297
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674056505301954430, guid: 1a3a8ec5befd74f60b2e76e0fbac8b98, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 1.4219844
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674056505301954430, guid: 1a3a8ec5befd74f60b2e76e0fbac8b98, type: 3}
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 610373287}
+    - target: {fileID: 4945231168510509400, guid: 1a3a8ec5befd74f60b2e76e0fbac8b98, type: 3}
+      propertyPath: m_ConnectedRigidBody
+      value: 
+      objectReference: {fileID: 1374007481}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2316657922585104661, guid: 1a3a8ec5befd74f60b2e76e0fbac8b98, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1024333290}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3a8ec5befd74f60b2e76e0fbac8b98, type: 3}
