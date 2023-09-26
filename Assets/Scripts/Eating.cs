@@ -15,8 +15,10 @@ public class Eating : MonoBehaviour
     [Header("Components")]
     [SerializeField] Animator _animator;
     [SerializeField] GameObject _candy;
+    [SerializeField] EndDoors _doors;
     [Header("Filds")]
-    [SerializeField] float _wait;
+    [SerializeField] float _waitForDestroy;
+    [SerializeField] float _waitForEnd;
     [Header("Events")]
     [SerializeField] UnityEvent _event;
     //Privates
@@ -27,7 +29,8 @@ public class Eating : MonoBehaviour
     #region Default Informations
     void Reset()
     {
-        _wait = 2f;
+        _waitForDestroy = 2f;
+        _waitForEnd = 2f;
     }
     #endregion
     #region Unity LifeCycle
@@ -40,7 +43,6 @@ public class Eating : MonoBehaviour
         if (collision.attachedRigidbody == null) return;
         if (collision.attachedRigidbody.gameObject.CompareTag(_candy.tag))
         {
-            _event.Invoke();
             _end = StartCoroutine(EndCoroutine());
         }
     }
@@ -49,9 +51,13 @@ public class Eating : MonoBehaviour
     IEnumerator EndCoroutine()
     {
         //throw new NotImplementedException();
-        yield return new WaitForSeconds(_wait);
+        _event.Invoke();
+        yield return new WaitForSeconds(_waitForDestroy);
+        Destroy(_candy);
         // Chargez la scène actuelle à nouveau
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        yield return new WaitForSeconds(_waitForEnd);
+        _doors.ClosingDoors();
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     #endregion
 }

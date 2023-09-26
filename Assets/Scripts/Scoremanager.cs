@@ -9,12 +9,13 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 
-public class OnClick : MonoBehaviour
+public class Scoremanager : MonoBehaviour
 {
     #region Champs
-    [SerializeField] InputActionReference _click;
-    #endregion
-    #region Enumerator
+    [SerializeField] TextMeshProUGUI _scoreText;
+    int _score = 0;
+    int score;
+    public static Scoremanager Instance { get; private set; }
     #endregion
     #region Default Informations
     void Reset()
@@ -27,7 +28,7 @@ public class OnClick : MonoBehaviour
     
     void Awake()
     {
-        
+        Instance = this;
     }
     void Start()
     {
@@ -37,22 +38,21 @@ public class OnClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_click.action.IsPressed())
-        {
-            gameObject.SetActive(false);
-        }
+        
     }
     #endregion
     #region Methods
-    void FixedUpdate()
+    internal void AddScore(int amount)
     {
-        
-    }
-    void LateUpdate()
-    {
-        
+        _score += amount;
+        _scoreText.text = _score.ToString();
+        //Debug.Log($" Death count : {_score}");
     }
     #endregion
     #region Coroutines
+    IEnumerator EndCoroutine()
+    {
+        throw new NotImplementedException();   
+    }
     #endregion
 }

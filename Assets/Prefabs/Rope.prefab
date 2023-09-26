@@ -172,9 +172,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000008663042, y: 0.21133436}
+  m_Offset: {x: -0.024992583, y: 0.015952}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.50344646
 --- !u!114 &4377103338622126310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,9 +360,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000018041915, y: 0.2113329}
+  m_Offset: {x: 0.044193145, y: 0.071780466}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.49437958
 --- !u!114 &1330112877077158331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,7 +507,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.058929324, y: -0.40212727}
+  m_ConnectedAnchor: {x: 0.058929205, y: -0.40212727}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 0
@@ -548,9 +548,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000008663042, y: 0.21133436}
+  m_Offset: {x: 0.01823334, y: 0.073267885}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.45259994
 --- !u!114 &425893341803284883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,9 +736,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000008663042, y: 0.21133436}
+  m_Offset: {x: 0.031200256, y: 0.06489936}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.51402366
 --- !u!114 &5315674221771326448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,7 +761,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2599418814222598659}
-  - component: {fileID: 8300535852798428853}
   m_Layer: 0
   m_Name: Rope
   m_TagString: Untagged
@@ -789,36 +788,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8300535852798428853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8361411401848910749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 87ab62723d1514cae8f4d2ba42c9366c, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Touch
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &9069091271253507132
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,9 +960,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000008663042, y: 0.21133436}
+  m_Offset: {x: 0.014503645, y: 0.028468594}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.5533108
 --- !u!114 &5338900100354138603
 MonoBehaviour:
   m_ObjectHideFlags: 0
