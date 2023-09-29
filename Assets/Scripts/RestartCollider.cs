@@ -9,16 +9,15 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 
-public class NextLevel : MonoBehaviour
+public class RestartCollider : MonoBehaviour
 {
     #region Champs
-    [SerializeField] InputActionReference _click;
-    [SerializeField] string _next;
+    [SerializeField] GameObject _candy;
     #endregion
     #region Default Informations
     void Reset()
     {
-        _next = "Menu";
+        
     }
     #endregion
     #region Unity LifeCycle
@@ -40,11 +39,12 @@ public class NextLevel : MonoBehaviour
     }
     #endregion
     #region Methods
-    public void Next()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (_click.action.IsPressed())
+        if (collision.attachedRigidbody == null) return;
+        if (collision.attachedRigidbody.gameObject.CompareTag(_candy.tag))
         {
-            SceneManager.LoadScene(_next);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
     #endregion

@@ -12,16 +12,12 @@ using UnityEngine.SceneManagement;
 public class EndDoors : MonoBehaviour
 {
     #region Champs
-    [Header("Objects_Components")]
-    [SerializeField] GameObject _stars;
-    [SerializeField] GameObject _buttons;
     [Header("actions_Components")]
     [SerializeField] Animator _doorsAnimator;
-    [SerializeField] UnityEvent _doorsEvent;
-    [Header("Scenes_Names")]
-    
-    [Header("Event_Components")]
-    [SerializeField] UnityEvent _ButtonsEnvents;
+    [SerializeField] float _wait;
+    [Header("Audio_Components")]
+    [SerializeField] AudioSource _source;
+    [SerializeField] AudioClip _clip;
     #endregion
     #region Default Informations
     void Reset()
@@ -30,28 +26,20 @@ public class EndDoors : MonoBehaviour
     }
     #endregion
     #region Unity LifeCycle
-    // Start is called before the first frame update
-    void Awake()
-    {
-        
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-      
-    }
     #endregion
     #region Methods
     public void ClosingDoors()
     {
         _doorsAnimator.SetTrigger("CLOSING");
+        StartCoroutine(Finished());
     }
     #endregion
     #region Coroutines
+    IEnumerator Finished()
+    {
+        //throw new NotImplementedException();
+        yield return new WaitForSeconds(_wait);
+        _source.PlayOneShot(_clip);
+    }
     #endregion
 }

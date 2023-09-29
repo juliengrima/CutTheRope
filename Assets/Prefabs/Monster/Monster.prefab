@@ -118,9 +118,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004586518, y: 0.022956789}
+  m_Offset: {x: 0.04317546, y: 0.34606493}
   serializedVersion: 2
-  m_Radius: 0.78265905
+  m_Radius: 0.7441412
 --- !u!114 &856713329520839583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +136,11 @@ MonoBehaviour:
   _animator: {fileID: 3582266441259425010}
   _candy: {fileID: 0}
   _wait: 1
+  _source: {fileID: 0}
+  _clipEnter: {fileID: 8300000, guid: e637754d86ccb21459b70572ac791af9, type: 3}
+  _clipExit: {fileID: 8300000, guid: 0dfaf07c97ee57b4fb3d6139319fe100, type: 3}
+  _clipClose: {fileID: 8300000, guid: d2245adae6f6c044e96f36c3cd275e8d, type: 3}
+  _waitAudio: 2
 --- !u!1 &812468531417872137
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,9 +387,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.10022271}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3997773
 --- !u!114 &418990676503617029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,6 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 3582266441259425010}
   _candy: {fileID: 0}
+  _ropes: {fileID: 0}
   _doors: {fileID: 0}
   _waitForDestroy: 1
   _waitForEnd: 2

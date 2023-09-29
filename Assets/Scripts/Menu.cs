@@ -12,13 +12,14 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     #region Champs
-    [SerializeField] InputActionReference _click;
     [SerializeField] string _menu;
+    [SerializeField] string _next;
     #endregion
     #region Default Informations
     void Reset()
     {
         _menu = "Menu";
+        _next = "Lev2";
     }
     #endregion
     #region Unity LifeCycle
@@ -42,11 +43,17 @@ public class Menu : MonoBehaviour
     #region Methods
     public void LoadMenu()
     {
-        if (_click.action.IsPressed())
-        {
-            SceneManager.LoadScene(_menu);
-        }
-        
+        SceneManager.LoadScene(_menu); 
+    }
+
+    public void Next()
+    {
+        SceneManager.LoadScene(_next);
+    }
+
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     #endregion
     #region Coroutines

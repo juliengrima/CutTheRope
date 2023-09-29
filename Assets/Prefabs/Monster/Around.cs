@@ -10,11 +10,19 @@ using TMPro;
 public class Around : MonoBehaviour
 {
     #region Champs
+    [Header("Around_Components")]
     [SerializeField] Animator _animator;
     [SerializeField] GameObject _candy;
     [SerializeField] float _wait;
+    [Header("Audio_Monster")]
+    [SerializeField] AudioSource _source;
+    [SerializeField] AudioClip _clipEnter;
+    [SerializeField] AudioClip _clipExit;
+    [SerializeField] AudioClip _clipClose;
+    [SerializeField] float _waitAudio;
 
     Coroutine _Animation;
+    Coroutine _Audio;
     bool _candyDetected;
     #endregion
     #region Enumerator
@@ -38,8 +46,10 @@ public class Around : MonoBehaviour
         {
             _candyDetected = true;
             _animator.SetBool("AROUNDENTER", _candyDetected);
+            _Audio = StartCoroutine(AudioCoroutine());
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.attachedRigidbody == null) return;
@@ -56,8 +66,18 @@ public class Around : MonoBehaviour
     {
         //throw new NotImplementedException();
         _animator.SetTrigger("AROUNDEXIST");
+        _source.PlayOneShot(_clipClose);
+        yield return new WaitForSeconds(_waitAudio);
+        _source.PlayOneShot(_clipExit);
         yield return new WaitForSeconds(_wait);
         _animator.SetTrigger("IDLE");
+    }
+
+    IEnumerator AudioCoroutine()
+    {
+        //throw new NotImplementedException();
+        yield return new WaitForSeconds(_waitAudio);
+        _source.PlayOneShot(_clipEnter);
     }
     #endregion
 }

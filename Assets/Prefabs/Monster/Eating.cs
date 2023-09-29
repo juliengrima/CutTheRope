@@ -15,6 +15,7 @@ public class Eating : MonoBehaviour
     [Header("Components")]
     [SerializeField] Animator _animator;
     [SerializeField] GameObject _candy;
+    [SerializeField] GameObject _ropes;
     [SerializeField] EndDoors _doors;
     [Header("Filds")]
     [SerializeField] float _waitForDestroy;
@@ -54,6 +55,8 @@ public class Eating : MonoBehaviour
         _event.Invoke();
         yield return new WaitForSeconds(_waitForDestroy);
         Destroy(_candy);
+        _ropes.SetActive(false);
+
         // Chargez la scène actuelle à nouveau
         yield return new WaitForSeconds(_waitForEnd);
         _doors.ClosingDoors();
