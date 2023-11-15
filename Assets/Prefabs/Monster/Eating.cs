@@ -22,6 +22,7 @@ public class Eating : MonoBehaviour
     [SerializeField] float _waitForEnd;
     [Header("Events")]
     [SerializeField] UnityEvent _event;
+    [SerializeField] Reward _reward;
     //Privates
     Coroutine _end;
     #endregion
@@ -51,7 +52,7 @@ public class Eating : MonoBehaviour
     #region Coroutines
     IEnumerator EndCoroutine()
     {
-        //throw new NotImplementedException();
+        //throw new NotImplementedException();      
         _event.Invoke();
         yield return new WaitForSeconds(_waitForDestroy);
         Destroy(_candy);
@@ -59,6 +60,8 @@ public class Eating : MonoBehaviour
 
         // Chargez la scène actuelle à nouveau
         yield return new WaitForSeconds(_waitForEnd);
+        _reward.ShowAd();
+        yield return new WaitForSeconds(15f);
         _doors.ClosingDoors();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

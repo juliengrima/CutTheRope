@@ -12,6 +12,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     #region Champs
+    [SerializeField] Reward _reward;
     [SerializeField] string _menu;
     [SerializeField] string _next;
     #endregion
@@ -31,7 +32,7 @@ public class Menu : MonoBehaviour
     }
     void Start()
     {
-        
+        _reward.LoadAd();
     }
 
     // Update is called once per frame

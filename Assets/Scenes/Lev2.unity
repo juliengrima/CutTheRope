@@ -1544,8 +1544,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7005560651755310690, guid: c5125acf9aee04718a4b6ccf4d83c3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5856607021835399393}
   m_SourcePrefab: {fileID: 100100000, guid: c5125acf9aee04718a4b6ccf4d83c3cd, type: 3}
+--- !u!1 &5856607021835399392 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7005560651755310690, guid: c5125acf9aee04718a4b6ccf4d83c3cd, type: 3}
+  m_PrefabInstance: {fileID: 5856607021835399391}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5856607021835399393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5856607021835399392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b031dfdc71a44cd4889f50a8b509e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
 --- !u!1001 &7647454845763889455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1612,6 +1634,67 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6857015748894698033, guid: 3c5cbacceab1d40bbafa7b3d3f0a0722, type: 3}
   m_PrefabInstance: {fileID: 7647454845763889455}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7841011939987233715
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1777983409712287498, guid: 611f1d849fa3343f5b7d9d992749b619, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777983409712287498, guid: 611f1d849fa3343f5b7d9d992749b619, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.5058594
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777983409712287498, guid: 611f1d849fa3343f5b7d9d992749b619, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.661621
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777983409712287498, guid: 611f1d849fa3343f5b7d9d992749b619, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.026743315
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777983409712287498, guid: 611f1d849fa3343f5b7d9d992749b619, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777983409712287498, guid: 611f1d849fa3343f5b7d9d992749b619, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777983409712287498, guid: 611f1d849fa3343f5b7d9d992749b619, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777983409712287498, guid: 611f1d849fa3343f5b7d9d992749b619, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777983409712287498, guid: 611f1d849fa3343f5b7d9d992749b619, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777983409712287498, guid: 611f1d849fa3343f5b7d9d992749b619, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777983409712287498, guid: 611f1d849fa3343f5b7d9d992749b619, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528895300973563591, guid: 611f1d849fa3343f5b7d9d992749b619, type: 3}
+      propertyPath: m_Name
+      value: '####ADManager####'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 611f1d849fa3343f5b7d9d992749b619, type: 3}
 --- !u!1001 &8250958009794160752
 PrefabInstance:
   m_ObjectHideFlags: 0

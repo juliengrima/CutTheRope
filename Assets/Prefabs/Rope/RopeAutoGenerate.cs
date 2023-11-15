@@ -24,6 +24,9 @@ public class RopeAutoGenerate : MonoBehaviour
     [SerializeField] AudioClip _clip;
     //Private
     float _jump;
+    public List<GameObject> List { get => _list; }
+    public List<GameObject> Hook { get => _hook; }
+    public Transform Candy { get => _candy; }
     #endregion
     #region Default Informations
     void Reset()
@@ -92,8 +95,7 @@ public class RopeAutoGenerate : MonoBehaviour
             var end = _candy.GetComponent<Rigidbody2D>();
             end.AddComponent<HingeJoint2D>().connectedBody = _list[_list.Count - 1].GetComponent<Rigidbody2D>();
         }
-        _source.PlayOneShot(_clip); 
-
+        _source.PlayOneShot(_clip);
     }
     #endregion
     #region Coroutines
